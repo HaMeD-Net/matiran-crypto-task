@@ -1,4 +1,3 @@
-// pages/dashboard/index.tsx
 import {
   LineChart,
   Line,
@@ -11,8 +10,6 @@ import {
   Bar,
 } from "recharts";
 import { useLogicDashboard } from "./useLogicDashboard";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Button, Stack, Typography } from "@mui/material";
 
 export default function Dashboard() {
