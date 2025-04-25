@@ -40,8 +40,8 @@ export const useLogicDashboard = () => {
         label = key;
       } else if (timeFrame === "7") {
         const weekStart = new Date(dateObj);
-        const day = weekStart.getDay(); // 0 = Sunday ... 6 = Saturday
-        weekStart.setDate(weekStart.getDate() - day); // ابتدای هفته
+        const day = weekStart.getDay();
+        weekStart.setDate(weekStart.getDate() - day);
         key = `${weekStart.getFullYear()}-${weekStart.getMonth()}-${weekStart.getDate()}`;
         label = weekStart.toLocaleDateString("fa-IR");
       } else if (timeFrame === "30") {
@@ -65,7 +65,7 @@ export const useLogicDashboard = () => {
     return Object.entries(grouped).map(([key, prices]) => {
       const avg = prices.reduce((sum, val) => sum + val, 0) / prices.length;
       return {
-        name: labelDates[key], // فقط تاریخ
+        name: labelDates[key],
         price: avg.toFixed(2),
       };
     });

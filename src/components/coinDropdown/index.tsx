@@ -3,13 +3,13 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import { Props } from "./types";
+import { IProps, Coin } from "./types";
 
 export default function CoinDropdown({
   coinList,
   selectedCoin,
   handleCoinSelect,
-}: Props) {
+}: IProps) {
   return (
     <Box sx={{ minWidth: 320 }}>
       <FormControl fullWidth>
@@ -17,13 +17,13 @@ export default function CoinDropdown({
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={selectedCoin}
+          value={selectedCoin?.value}
           label="Coin"
           onChange={handleCoinSelect}
         >
-          {coinList.map((coin) => (
-            <MenuItem value={coin.value} title={coin.label}>
-              {coin.label}
+          {coinList.map((coin: Coin) => (
+            <MenuItem value={coin?.value} title={coin?.label}>
+              {coin?.label}
             </MenuItem>
           ))}
         </Select>
