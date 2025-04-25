@@ -13,10 +13,10 @@
     "types": ["node"],
     "paths": {
       "@/*": ["*"],
-      "@api/*": ["src/api/*"],
-      "@pages/*": ["src/pages/*"],
-      "@components/*": ["src/components/*"],
-      "@store/*": ["src/store/*"]
+      "@api/*": ["api/*"],
+      "@pages/*": ["pages/*"],
+      "@components/*": ["components/*"],
+      "@store/*": ["store/*"]
     }
   }
 }

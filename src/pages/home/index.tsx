@@ -1,13 +1,18 @@
-import CoinDropdown from "@components/CoinDropdown";
+import CoinDropdown from "@components/coinDropdown";
 import useLogicHome from "./useLogicHome";
 import { Button } from "@mui/material";
 
 export default function Home() {
-  const { handleCoinSelect, navigate, price, coinList } = useLogicHome();
+  const { handleCoinSelect, navigate, price, coinList, selectedCoin } =
+    useLogicHome();
   return (
     <>
       <div className="flex min-h-screen items-center justify-center bg-gray-100 px-4 flex-col">
-        <CoinDropdown coinList={coinList} handleCoinSelect={handleCoinSelect} />
+        <CoinDropdown
+          coinList={coinList}
+          handleCoinSelect={handleCoinSelect}
+          selectedCoin={selectedCoin}
+        />
         <div className="rounded-xl bg-white p-6 shadow-md space-y-6">
           <h1 className="text-2xl font-bold text-center">قیمت ارز دیجیتال</h1>
 

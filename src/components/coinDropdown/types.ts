@@ -1,10 +1,14 @@
-export type Coin = {
-  label: string;
-  value: string;
-};
+import { SelectChangeEvent } from "@mui/material";
 
-export interface Props {
+export type Coin =
+  | {
+      label: string;
+      value: string;
+    }
+  | undefined;
+
+export interface IProps {
   coinList: Coin[];
   selectedCoin: Coin;
-  handleCoinSelect: () => void;
+  handleCoinSelect: (event: SelectChangeEvent) => void;
 }
