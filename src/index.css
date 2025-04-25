@@ -1,18 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Vazirmatn", sans-serif !important;
+}
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Vazirmatn", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background-color: darkgoldenrod;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
 }
-
+.MuiButtonBase-root {
+  font-family: "Vazirmatn", sans-serif !important;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -25,9 +34,11 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: "Vazirmatn", sans-serif !important;
 }
 
 h1 {
@@ -42,8 +53,9 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #ffffff;
   cursor: pointer;
+  color: darkblue;
   transition: border-color 0.25s;
 }
 button:hover {
@@ -54,9 +66,13 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.MuiAlert-message {
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #ffffff;
     background-color: #ffffff;
   }
   a:hover {
