@@ -1,5 +1,3 @@
-// import { SelectChangeEvent } from "@mui/material";
-
 export type Coin =
   | {
       label: string;
