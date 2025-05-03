@@ -1,5 +1,3 @@
-import { SelectChangeEvent } from "@mui/material";
-
 export type Coin =
   | {
       label: string;
@@ -10,5 +8,5 @@ export type Coin =
 export interface IProps {
   coinList: Coin[];
   selectedCoin: Coin;
-  handleCoinSelect: (event: SelectChangeEvent) => void;
+  handleCoinSelect: (event: any) => void;
 }
