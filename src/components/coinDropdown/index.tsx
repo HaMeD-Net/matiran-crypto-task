@@ -4,6 +4,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { IProps, Coin } from "./types";
+import { Autocomplete } from "@mui/material";
+import TextField from "@mui/material/TextField";
 
 export default function CoinDropdown({
   coinList,
@@ -27,6 +29,17 @@ export default function CoinDropdown({
             </MenuItem>
           ))}
         </Select>
+        <Autocomplete
+          id="demo-simple-select-label"
+          value={selectedCoin?.value}
+          onChange={console.log}
+          inputValue={selectedCoin?.value}
+          onInputChange={console.log}
+          options={coinList.map((coin) => coin?.label)}
+          renderInput={(params) => (
+            <TextField {...params} label="Controllable" />
+          )}
+        />
       </FormControl>
     </Box>
   );
